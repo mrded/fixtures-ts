@@ -248,6 +248,10 @@ type FixtureRegistry<Deps> = {
 };
 ```
 
+## Sponsors
+
+- [Checkatrade](https://www.checkatrade.com/)
+
 ## License
 
 MIT
