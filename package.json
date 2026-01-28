@@ -1,0 +1,46 @@
+{
+  "name": "fixture-kit",
+  "version": "0.1.0",
+  "description": "Type-safe test fixture management with automatic dependency resolution",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "test",
+    "fixtures",
+    "testing",
+    "typescript",
+    "dependency-resolution",
+    "test-utilities"
+  ],
+  "author": "Dmitry Demenchuk",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrded/fixture-kit.git"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
