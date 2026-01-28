@@ -1,4 +1,4 @@
-# fixture-kit
+# fixtures-ts
 
 Type-safe test fixture management with automatic dependency resolution.
 
@@ -13,13 +13,13 @@ Type-safe test fixture management with automatic dependency resolution.
 ## Installation
 
 ```bash
-npm install fixture-kit
+npm install fixtures-ts
 # or
-yarn add fixture-kit
+yarn add fixtures-ts
 # or
-pnpm add fixture-kit
+pnpm add fixtures-ts
 # or
-bun add fixture-kit
+bun add fixtures-ts
 ```
 
 ## Quick Start
@@ -29,7 +29,7 @@ import {
   createFixtures,
   defineFixture,
   type FixtureRegistry,
-} from "fixture-kit";
+} from "fixtures-ts";
 
 // Define your dependencies
 type Deps = {

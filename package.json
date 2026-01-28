@@ -1,5 +1,5 @@
 {
-  "name": "fixture-kit",
+  "name": "fixtures-ts",
   "version": "0.1.0",
   "description": "Type-safe test fixture management with automatic dependency resolution",
   "type": "module",
@@ -36,7 +36,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mrded/fixture-kit.git"
+    "url": "https://github.com/mrded/fixtures-ts.git"
   },
   "devDependencies": {
     "prettier": "^3.8.1",

@@ -1,9 +1,9 @@
 /**
- * fixture-kit - Type-safe test fixture management with automatic dependency resolution
+ * fixtures-ts - Type-safe test fixture management with automatic dependency resolution
  *
  * @example
  * ```typescript
- * import { createFixtures, defineFixture, type FixtureRegistry } from "fixture-kit";
+ * import { createFixtures, defineFixture, type FixtureRegistry } from "fixtures-ts";
  *
  * type Deps = {
  *   db: Database;
