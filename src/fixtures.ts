@@ -116,8 +116,7 @@ export const createFixtures = <
     } catch (error) {
       // Cleanup already-created fixtures before rethrowing
       for (const cleanup of [...state.cleanups].reverse()) {
-        // Ignore cleanup errors
-        await cleanup().catch(() => {});
+        await cleanup();
       }
       state.cleanups = [];
       state.deps = null;
@@ -127,8 +126,7 @@ export const createFixtures = <
 
   const teardown = async () => {
     for (const cleanup of state.cleanups.reverse()) {
-      // Ignore cleanup errors
-      await cleanup().catch(() => {});
+      await cleanup();
     }
     state.deps = null;
     state.cleanups = [];
