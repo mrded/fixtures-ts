@@ -180,7 +180,7 @@ describe("fixtures", () => {
     await fixtures.teardown();
   });
 
-  it("should continue cleanup even if one fails", async () => {
+  it("should throw if cleanup fails", async () => {
     // Arrange
     const cleanup1 = mock(async () => {});
     const cleanup2 = mock(async () => {
@@ -207,12 +207,12 @@ describe("fixtures", () => {
 
     // Act
     await fixtures.setup();
-    await fixtures.teardown();
 
     // Assert
+    await expect(fixtures.teardown()).rejects.toThrow("cleanup failed");
     expect(cleanup3).toHaveBeenCalledOnce();
     expect(cleanup2).toHaveBeenCalledOnce();
-    expect(cleanup1).toHaveBeenCalledOnce();
+    expect(cleanup1).not.toHaveBeenCalled();
   });
 
   it("should throw on circular dependency", async () => {
