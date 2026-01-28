@@ -92,7 +92,7 @@ export const createFixtures = <
         const fixture = getFixture(registry, n);
         const d = [...fixture.dependencies];
         dependencies.set(n, d);
-        d.forEach(dep => {
+        d.forEach((dep) => {
           toLoad.add(dep);
           loadDeps(dep);
         });
@@ -137,7 +137,7 @@ export const createFixtures = <
   const get = (): Pick<Deps, K> => {
     if (!state.deps) throw new Error("Fixtures not initialized");
     return Object.fromEntries(
-      requested.map(name => [name, state.deps![name]]),
+      requested.map((name) => [name, state.deps![name]]),
     ) as Pick<Deps, K>;
   };
 

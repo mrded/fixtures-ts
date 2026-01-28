@@ -25,7 +25,11 @@ bun add fixture-kit
 ## Quick Start
 
 ```typescript
-import { createFixtures, defineFixture, type FixtureRegistry } from "fixture-kit";
+import {
+  createFixtures,
+  defineFixture,
+  type FixtureRegistry,
+} from "fixture-kit";
 
 // Define your dependencies
 type Deps = {
@@ -79,8 +83,8 @@ defineFixture(
   async ({ dep1, dep2 }) => ({
     value: createResource(dep1, dep2),
     cleanup: async () => cleanupResource(),
-  })
-)
+  }),
+);
 ```
 
 ### `createFixtures(registry, requested)`
@@ -90,9 +94,9 @@ Creates a fixture instance for tests.
 ```typescript
 const fixtures = createFixtures(registry, ["fixture1", "fixture2"]);
 
-await fixtures.setup();    // Setup all fixtures
+await fixtures.setup(); // Setup all fixtures
 const deps = fixtures.get(); // Get fixture values
-await fixtures.teardown();  // Cleanup all fixtures
+await fixtures.teardown(); // Cleanup all fixtures
 ```
 
 ## Examples
@@ -213,13 +217,16 @@ const registry: FixtureRegistry<Deps> = {
     cleanup: async () => {},
   })),
 
-  client: defineFixture(["server", "authToken"], async ({ server, authToken }) => ({
-    value: createClient({
-      baseUrl: server.url,
-      headers: { Authorization: `Bearer ${authToken}` },
+  client: defineFixture(
+    ["server", "authToken"],
+    async ({ server, authToken }) => ({
+      value: createClient({
+        baseUrl: server.url,
+        headers: { Authorization: `Bearer ${authToken}` },
+      }),
+      cleanup: async () => {},
     }),
-    cleanup: async () => {},
-  })),
+  ),
 };
 ```
 

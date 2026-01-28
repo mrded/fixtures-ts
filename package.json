@@ -20,6 +20,8 @@
     "build": "tsc",
     "test": "bun test",
     "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "prepublishOnly": "bun run build"
   },
   "keywords": [
@@ -37,6 +39,7 @@
     "url": "https://github.com/mrded/fixture-kit.git"
   },
   "devDependencies": {
+    "prettier": "^3.8.1",
     "typescript": "^5.9.3"
   },
   "peerDependencies": {},
