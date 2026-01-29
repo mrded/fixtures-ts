@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "fixture-kit",
+      "name": "fixtures-ts",
       "devDependencies": {
         "prettier": "^3.8.1",
         "typescript": "^5.9.3",
