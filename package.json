@@ -1,13 +1,13 @@
 {
   "name": "fixtures-ts",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Type-safe test fixture management with automatic dependency resolution",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.js"
+      "default": "./dist/index.js"
     }
   },
   "files": [
