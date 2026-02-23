@@ -1,5 +1,6 @@
 # fixtures-ts
 
+Bring Playwright/Vitest-style typed fixtures to any test runner.
 Type-safe test fixture management with automatic dependency resolution.
 
 ## Features
@@ -9,6 +10,10 @@ Type-safe test fixture management with automatic dependency resolution.
 - **Cleanup management** - Automatic cleanup in reverse order
 - **Circular dependency detection** - Prevents infinite loops
 - **Framework agnostic** - Works with any test framework
+
+## Motivation
+
+Originally built to bring a proper fixture model to `bun:test`, but works with any JavaScript test framework.
 
 ## Installation
 
