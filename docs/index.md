@@ -27,40 +27,38 @@ import {
   type FixtureRegistry,
 } from "fixtures-ts";
 
-// Define your dependencies
-type Deps = {
+type Fixtures = {
   db: Database;
   client: TestClient;
 };
 
-// Create a fixture registry
-const registry: FixtureRegistry<Deps> = {
-  db: defineFixture([], async () => ({
+const registry: FixtureRegistry<Fixtures> = {
+  db: defineFixture<Fixtures, [], Fixtures["db"]>([], async () => ({
     value: await createTestDatabase(),
     cleanup: async () => await closeDatabase(),
   })),
 
-  client: defineFixture(["db"], async ({ db }) => ({
-    value: createTestClient(db),
-    cleanup: async () => {},
-  })),
+  client: defineFixture<Fixtures, ["db"], Fixtures["client"]>(
+    ["db"],
+    async ({ db }) => ({
+      value: createTestClient(db),
+      cleanup: async () => {},
+    }),
+  ),
 };
 
-// Use in tests
 const fixtures = createFixtures(registry, ["client"]);
+
 beforeEach(fixtures.setup);
 afterEach(fixtures.teardown);
 
-test("should fetch users", async () => {
+test("should work", async () => {
   const { client } = fixtures.get();
-  const users = await client.fetchUsers();
-  expect(users).toHaveLength(0);
+  // use client...
 });
 ```
 
 ## Getting Started
 
-1. [Install](installation) fixtures-ts in your project
-2. Follow the [Quick Start](quick-start) guide
-3. Explore [Examples](examples) for common patterns
-4. Check the [API Reference](api) for detailed documentation
+1. Check out the [Getting Started](getting-started) guide for installation, quick start, and API reference
+2. Learn about [File Organization](file-organization) for practical patterns and larger projects

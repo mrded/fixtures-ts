@@ -32,12 +32,9 @@ To run the documentation site locally:
 - `_config.yml` - Jekyll configuration
 - `_layouts/` - Page templates
 - `assets/` - CSS and other static assets
-- `guide/` - User guide documentation
-- `examples/` - Example code and patterns
 - `index.md` - Homepage
-- `installation.md` - Installation instructions
-- `quick-start.md` - Quick start guide
-- `api.md` - API reference
+- `getting-started.md` - Installation, quick start, and API reference
+- `file-organization.md` - Practical patterns for larger projects
 
 ## Publishing
 
