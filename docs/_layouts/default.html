@@ -31,35 +31,10 @@
                                 <a class="nav-link{% if page.path == 'index.md' %} active{% endif %}" href="{{ "/" | prepend: site.baseurl }}">Overview</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link{% if page.path == 'installation.md' %} active{% endif %}" href="{{ "/installation" | prepend: site.baseurl }}">Installation</a>
+                                <a class="nav-link{% if page.path == 'getting-started.md' %} active{% endif %}" href="{{ "/getting-started" | prepend: site.baseurl }}">Getting Started</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link{% if page.path == 'quick-start.md' %} active{% endif %}" href="{{ "/quick-start" | prepend: site.baseurl }}">Quick Start</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link{% if page.dir == '/guide/' %} active{% endif %}" href="{{ "/guide" | prepend: site.baseurl }}">Guide</a>
-                                {% if page.dir == '/guide/' %}
-                                <ul class="nav flex-column ms-3">
-                                    <li class="nav-item"><a class="nav-link py-1{% if page.path == 'guide/index.md' %} active{% endif %}" href="{{ "/guide/index" | prepend: site.baseurl }}">Overview</a></li>
-                                    <li class="nav-item"><a class="nav-link py-1{% if page.path == 'guide/defining-fixtures.md' %} active{% endif %}" href="{{ "/guide/defining-fixtures" | prepend: site.baseurl }}">Defining Fixtures</a></li>
-                                    <li class="nav-item"><a class="nav-link py-1{% if page.path == 'guide/dependencies.md' %} active{% endif %}" href="{{ "/guide/dependencies" | prepend: site.baseurl }}">Dependencies</a></li>
-                                    <li class="nav-item"><a class="nav-link py-1{% if page.path == 'guide/cleanup.md' %} active{% endif %}" href="{{ "/guide/cleanup" | prepend: site.baseurl }}">Cleanup</a></li>
-                                </ul>
-                                {% endif %}
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link{% if page.dir == '/examples/' %} active{% endif %}" href="{{ "/examples" | prepend: site.baseurl }}">Examples</a>
-                                {% if page.dir == '/examples/' %}
-                                <ul class="nav flex-column ms-3">
-                                    <li class="nav-item"><a class="nav-link py-1{% if page.path == 'examples/index.md' %} active{% endif %}" href="{{ "/examples/index" | prepend: site.baseurl }}">Overview</a></li>
-                                    <li class="nav-item"><a class="nav-link py-1{% if page.path == 'examples/database.md' %} active{% endif %}" href="{{ "/examples/database" | prepend: site.baseurl }}">Database Fixtures</a></li>
-                                    <li class="nav-item"><a class="nav-link py-1{% if page.path == 'examples/http-client.md' %} active{% endif %}" href="{{ "/examples/http-client" | prepend: site.baseurl }}">HTTP Client</a></li>
-                                    <li class="nav-item"><a class="nav-link py-1{% if page.path == 'examples/shared-dependencies.md' %} active{% endif %}" href="{{ "/examples/shared-dependencies" | prepend: site.baseurl }}">Shared Dependencies</a></li>
-                                </ul>
-                                {% endif %}
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link{% if page.path == 'api.md' %} active{% endif %}" href="{{ "/api" | prepend: site.baseurl }}">API Reference</a>
+                                <a class="nav-link{% if page.path == 'file-organization.md' %} active{% endif %}" href="{{ "/file-organization" | prepend: site.baseurl }}">File Organization</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ site.github.repository_url }}">View on GitHub</a>

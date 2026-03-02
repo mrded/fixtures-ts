@@ -90,12 +90,9 @@ docs/
 ├── assets/               # CSS and static files
 │   └── css/
 │       └── style.scss
-├── guide/                # User guide pages
-├── examples/             # Example code patterns
 ├── index.md              # Homepage
-├── installation.md       # Installation guide
-├── quick-start.md        # Quick start guide
-├── api.md                # API reference
+├── getting-started.md    # Installation, quick start, and API reference
+├── file-organization.md  # Practical patterns for larger projects
 ├── CNAME                 # Custom domain (optional)
 └── Gemfile               # Ruby dependencies
 ```
